@@ -6,7 +6,7 @@ phases:
       - echo Logging in to Amazon ECR...
       - aws --version
       - aws ecr get-login-password --region eu-west-1 | docker login --username AWS --password-stdin ${ACCOUNT_ID}.dkr.ecr.eu-west-1.amazonaws.com
-      - REPOSITORY_URI=${ACCOUNT_ID}.dkr.ecr.eu-west-1.amazonaws.com/openjdk
+      - REPOSITORY_URI=${ACCOUNT_ID}.dkr.ecr.eu-west-1.amazonaws.com/node
 
   build:
     commands:
